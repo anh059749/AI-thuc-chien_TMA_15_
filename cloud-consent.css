@@ -1,0 +1,36 @@
+.cloud-consent-box {
+  margin-top: 18px;
+  padding: 13px 14px;
+  border: 1px solid #dbe3e8;
+  border-radius: 8px;
+  background: #f7fafb;
+}
+
+.privacy-note {
+  margin: 0 0 10px;
+  color: #536875;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cloud-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #193245;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cloud-consent input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: #176b8a;
+}
+
+.cloud-consent:focus-within input {
+  outline: 3px solid #b8dce8;
+  outline-offset: 2px;
+}

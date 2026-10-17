@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essay Helper</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="upload-state.css" />
+    <link rel="stylesheet" href="results-photo.css" />
+    <link rel="stylesheet" href="multi-upload.css" />
+    <link rel="stylesheet" href="feedback.css" />
+    <link rel="stylesheet" href="loading-motion.css" />
+    <link rel="stylesheet" href="font-override.css" />
+    <link rel="stylesheet" href="cloud-consent.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header" aria-label="Essay Helper">
+        <a class="brand" href="#top" aria-label="Essay Helper home"><span class="brand-mark">E</span> Essay Helper</a>
+        <span class="header-note">Write with confidence</span>
+      </header>
+
+      <section id="top" class="intro" aria-labelledby="main-title">
+        <p class="eyebrow">YOUR ENGLISH WRITING BUDDY</p>
+        <h1 id="main-title">Make your essay clearer and stronger.</h1>
+        <p class="lead">Upload photos of your handwritten English essay. We will read the pages in order, identify the essay type, and give you helpful ideas to improve it.</p>
+      </section>
+
+      <section id="upload-section" class="upload-card" aria-labelledby="upload-title">
+        <div class="step-label">STEP 1</div>
+        <h2 id="upload-title">Add photos of your essay</h2>
+        <p class="helper-text">If your essay has more than one page, add up to 5 clear photos in page order.</p>
+
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0" aria-describedby="upload-hint">
+          <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden />
+          <div class="upload-icon" aria-hidden="true">↑</div>
+          <p class="drop-title">Drop your page photos here</p>
+          <p id="upload-hint" class="drop-copy">or choose one or more photos from your device</p>
+          <span class="secondary-button">Choose photos</span>
+          <p class="file-types">JPG, PNG, or WEBP · up to 5 photos · 10 MB each</p>
+        </div>
+        <p id="upload-error" class="message error" role="alert" hidden></p>
+
+        <div id="preview-panel" class="preview-panel" hidden>
+          <div class="preview-heading">
+            <p class="success-line"><span aria-hidden="true">✓</span> <span id="photo-count">Photos ready</span></p>
+            <div class="preview-actions">
+              <button id="add-photos-button" class="text-button" type="button">Add photos</button>
+              <button id="remove-all-button" class="text-button danger" type="button">Remove all</button>
+            </div>
+          </div>
+          <p class="preview-order-hint">Pages are read in this order. Use the arrows to change it.</p>
+          <div id="preview-list" class="preview-list"></div>
+        </div>
+
+        <div class="cloud-consent-box">
+          <p class="privacy-note">Your page photos and essay text are sent to an online AI service for reading and feedback. Please cover your name, school, and other private details first.</p>
+          <label class="cloud-consent" for="cloud-consent">
+            <input id="cloud-consent" type="checkbox" />
+            <span>I understand my page photos and essay text may be sent to an online AI service.</span>
+          </label>
+        </div>
+
+        <button id="improve-button" class="primary-button" type="button" disabled>Improve my essay <span aria-hidden="true">→</span></button>
+        <p id="ready-hint" class="button-hint">Add page photos and check the box to continue.</p>
+      </section>
+
+      <section class="how-it-works" aria-label="How it works">
+        <div><span>1</span><p>Upload your essay pages</p></div>
+        <div><span>2</span><p>We read and improve it</p></div>
+        <div><span>3</span><p>Learn from the suggestions</p></div>
+      </section>
+
+      <section id="processing" class="status-card" aria-live="polite" hidden>
+        <div class="scan-stage" aria-hidden="true"><img id="loading-preview" alt="" /><span class="scan-line"></span><span class="scan-corner top-left"></span><span class="scan-corner top-right"></span><span class="scan-corner bottom-left"></span><span class="scan-corner bottom-right"></span></div>
+        <div class="processing-orbit" aria-hidden="true"><span class="orbit-dot"></span><span class="orbit-dot"></span><span class="orbit-dot"></span></div>
+        <h2 id="processing-title">Reading your handwriting<span class="loading-dots" aria-hidden="true"><span></span><span></span><span></span></span></h2>
+        <p id="processing-copy">Reading your page photos in order.</p>
+        <div class="progress-track" aria-hidden="true"><span></span></div>
+        <ol class="processing-steps" aria-label="Processing steps">
+          <li>Reading photo</li>
+          <li>Checking writing</li>
+          <li>Preparing feedback</li>
+        </ol>
+      </section>
+
+      <section id="results" class="results" aria-live="polite" hidden>
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">YOUR RESULTS</p>
+            <h2>Nice work—here are ideas to improve it.</h2>
+          </div>
+          <button id="start-over-top" class="outline-button" type="button">Try another essay</button>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon" aria-hidden="true">✎</div>
+          <div><p class="label">ESSAY TYPE DETECTED</p><h3>Opinion essay</h3></div>
+          <p class="category-copy">You share your point of view and give reasons to support it.</p>
+        </div>
+
+        <div class="essay-grid">
+          <article class="essay-card original-card">
+            <div class="card-title-row"><div><p class="label">YOUR ORIGINAL</p><h3>Your uploaded photo</h3></div><span class="neutral-tag">From your photo</span></div>
+            <div id="result-images" class="result-images"></div>
+          </article>
+          <article class="essay-card improved-card">
+            <div class="card-title-row"><div><p class="label">HOW TO IMPROVE IT</p><h3>Revise it yourself</h3></div><span class="good-tag">Specific suggestions</span></div>
+            <ul id="improvement-guide" class="improvement-guide">
+              <li><strong>Grammar:</strong> Check the verb in “She go to school.”</li>
+            </ul>
+            <p class="learning-note"><strong>Write your own revision.</strong> This tool gives guidance, not a replacement essay. Copying work directly is plagiarism.</p>
+          </article>
+        </div>
+
+        <section class="transcription-card" aria-labelledby="transcription-title">
+          <div class="card-title-row">
+            <div><p class="label">CONVERTED TEXT</p><h3 id="transcription-title">Text read from your photo</h3></div>
+            <span class="neutral-tag">Check for reading mistakes</span>
+          </div>
+          <textarea id="transcribed-text" class="transcribed-text" rows="10" maxlength="20000" aria-label="Text recognized from your handwritten essay"></textarea>
+          <p class="transcription-note">Check this against your photo. Fix any words the AI read incorrectly, then update the suggestions.</p>
+          <div class="transcription-actions">
+            <button id="update-feedback-button" class="outline-button" type="button" disabled>Use corrected text for feedback</button>
+            <p id="transcription-status" class="transcription-status" role="status" aria-live="polite">You can edit the text above.</p>
+          </div>
+        </section>
+
+        <section class="report-card" aria-labelledby="report-title">
+          <p class="label">AI REPORT ON YOUR ORIGINAL</p>
+          <h3 id="report-title">What you did well and what to practise</h3>
+          <p id="ai-report">You shared a clear opinion. Next, focus on checking each verb carefully.</p>
+        </section>
+
+        <div class="start-again"><button id="start-over-bottom" class="primary-button" type="button">Improve another essay <span aria-hidden="true">→</span></button></div>
+      </section>
+    </main>
+    <footer>Essay Helper is here to help you practise. Your teacher is still the best person to ask for feedback.</footer>
+    <script src="app.js"></script>
+  </body>
+</html>

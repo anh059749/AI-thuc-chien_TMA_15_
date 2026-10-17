@@ -1,0 +1,125 @@
+.essay-photo {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  object-position: top;
+  border: 1px solid #dbe3e8;
+  border-radius: 7px;
+  background: #f7f9fa;
+  margin-top: 17px;
+}
+
+.learning-note {
+  margin: 18px 0 0;
+  padding: 13px 15px;
+  border-left: 4px solid #176b8a;
+  background: #f0f7fa;
+  color: #314854;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.transcription-card {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #dbe3e8;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.transcription-card h3 {
+  margin: 0;
+  color: #193245;
+  font-size: 18px;
+}
+
+.transcribed-text {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  margin-top: 14px;
+  padding: 13px;
+  border: 1px solid #dbe3e8;
+  border-radius: 7px;
+  background: #fbfcfc;
+  color: #193245;
+  font: inherit;
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.transcribed-text:focus-visible {
+  outline: 3px solid #80bad0;
+  outline-offset: 2px;
+}
+
+.transcription-note {
+  margin: 8px 0 0;
+  color: #637381;
+  font-size: 14px;
+}
+
+.transcription-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 12px;
+}
+
+.transcription-actions .outline-button {
+  margin: 0;
+}
+
+.transcription-actions .outline-button:disabled {
+  color: #637381;
+  background: #f1f4f5;
+  cursor: not-allowed;
+}
+
+.transcription-status {
+  margin: 0;
+  color: #637381;
+  font-size: 14px;
+}
+
+.learning-note strong {
+  color: #193245;
+}
+
+.improvement-guide {
+  margin: 17px 0 0;
+  padding-left: 20px;
+  color: #314854;
+}
+
+.improvement-guide li + li {
+  margin-top: 13px;
+}
+
+.improvement-guide blockquote {
+  margin: 5px 0;
+  color: #176b8a;
+  font-style: italic;
+}
+
+.report-card {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #dbe3e8;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.report-card h3 {
+  margin: 0;
+  color: #193245;
+  font-size: 18px;
+}
+
+.report-card p:last-child {
+  margin: 12px 0 0;
+  color: #435965;
+  line-height: 1.65;
+}

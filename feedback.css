@@ -1,0 +1,90 @@
+.feedback-button {
+  margin-top: 10px;
+  padding: 7px 11px;
+  border: 1px solid #a9c0cb;
+  border-radius: 7px;
+  background: #fff;
+  color: #176b8a;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.feedback-button:hover,
+.feedback-button[aria-pressed="true"] {
+  background: #edf6f8;
+  border-color: #176b8a;
+}
+
+.feedback-button:focus-visible {
+  outline: 3px solid #80bad0;
+  outline-offset: 2px;
+}
+
+.suggestion-advice {
+  margin: 8px 0 0;
+}
+
+.feedback-panel {
+  margin: 8px 0 0;
+  padding: 12px;
+  border: 1px solid #dbe3e8;
+  border-radius: 8px;
+  background: #f7fafb;
+}
+
+.feedback-note,
+.feedback-privacy-note {
+  margin: 0;
+  color: #506b78;
+  font-size: 14px;
+}
+
+.feedback-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 10px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.feedback-options legend {
+  padding: 0;
+  color: #193245;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.feedback-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  color: #314854;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.feedback-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: #176b8a;
+}
+
+.feedback-option input:focus-visible {
+  outline: 3px solid #80bad0;
+  outline-offset: 2px;
+}
+
+.feedback-selection {
+  margin: 8px 0 0;
+  color: #237557;
+  font-size: 13px;
+}
+
+.feedback-privacy-note {
+  margin-top: 8px;
+  font-size: 12px;
+}

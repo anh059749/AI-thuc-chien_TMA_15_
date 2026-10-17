@@ -1,0 +1,13 @@
+/* Uses Google Sans Text when it is available on the device. */
+body,
+button,
+input,
+textarea {
+  font-family: "Google Sans Text", "Google Sans", Arial, sans-serif;
+}
+
+/* Keep the revision reminder visually distinct from the main interface. */
+.learning-note,
+.learning-note strong {
+  font-family: Georgia, "Times New Roman", serif;
+}

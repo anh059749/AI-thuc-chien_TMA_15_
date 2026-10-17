@@ -1,0 +1,5 @@
+.env
+uploads/
+__pycache__/
+.venv/
+image_classifier_v1.keras

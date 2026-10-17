@@ -1,0 +1,4 @@
+/* Browser styles must never override semantic hidden states. */
+[hidden] {
+  display: none !important;
+}
